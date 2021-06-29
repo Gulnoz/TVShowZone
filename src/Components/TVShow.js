@@ -1,5 +1,5 @@
 import React,{useState, useEffect} from 'react';
-import { Card, Row } from 'react-bootstrap';
+import { Card, Col, Row } from 'react-bootstrap';
 
 const TVShow = (props) => {
     const{searchText}=props;
@@ -37,8 +37,7 @@ const TVShow = (props) => {
 
     const mapTVShow = () => tvShows.filter(item=>item.show.image?.medium).map((item, index) => {
         return (
-            <Row 
-                className="justify-content-center" 
+            <Col 
                 key={index} 
                 style={{margin:"10px" }}>
                 <Card style={{ width: '18rem' }}>
@@ -47,14 +46,15 @@ const TVShow = (props) => {
                         <Card.Img variant="top" src={item.show.image?.medium} />
                     </Card.Body>
                 </Card>
-            </Row>
+            </Col>
         )
         });
 
     return(
         <>
             { tvShows.length ? <h2>Search result for "{searchText}":</h2> : null}
-            <div> {mapTVShow()} </div>
+            <Row
+                className="d-flex justify-content-center"> {mapTVShow()} </Row>
         </>
     )
 
