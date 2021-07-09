@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - Using API http://api.tvmaze.com/search/shows?q={substr} 
 
 
-#Aplication screenshot:
+# Aplication screenshot:
 
 ![image](https://user-images.githubusercontent.com/33871558/123869475-0c53a300-d8ff-11eb-97a6-f8fba9fe93a3.png)
 
